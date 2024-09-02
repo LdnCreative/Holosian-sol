@@ -6,39 +6,109 @@
     <title>Holosian Sol Consulting</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom right, #f5e1c1, #f7c8a9, #f8b282, #f4d69f);
-            padding: 16px;
-            margin: 0;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 16px;
-        }
-        .grid-item, .image-break {
-            padding: 24px;
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-            transition: all 0.3s ease-in-out;
-            background-color: white;
-        }
-        .grid-item:hover {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-        }
-        .image-break {
-            height: 256px;
-            position: relative;
-            overflow: hidden;
-        }
-        .image-break img {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #f5e1c1, #f7c8a9, #f8b282, #f4d69f);
+    padding: 16px;
+    margin: 0;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+}
+.grid-item, .image-break {
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+.grid-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.image-break {
+    height: 256px;
+    position: relative;
+    overflow: hidden;
+}
+.image-break img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 256px; /* Asegurando que coincida con la altura de otras imágenes */
+    border-radius: 8px; /* Para coincidir con el estilo de las otras imágenes */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    overflow: hidden; /* Asegura que la imagen se mantenga dentro de las esquinas redondeadas */
+}
+
+h1, h2, h3 {
+    color: #1E90FF;
+    margin-bottom: 16px;
+}
+p {
+    color: #333;
+}
+button {
+    color: #1E90FF;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: color 0.3s ease-in-out;
+}
+button:hover {
+    color: #104E8B;
+}
+.bg-blue-50 { background-color: #EBF8FF; }
+.text-blue-800 { color: #2C5282; }
+.bg-green-50 { background-color: #F0FFF4; }
+.text-green-800 { color: #22543D; }
+.bg-yellow-50 { background-color: #FFFFF0; }
+.text-yellow-800 { color: #744210; }
+.bg-purple-50 { background-color: #FAF5FF; }
+.text-purple-800 { color: #553C9A; }
+.bg-pink-50 { background-color: #FFF5F7; }
+.text-pink-800 { color: #97266D; }
+.bg-indigo-50 { background-color: #EBF4FF; }
+.text-indigo-800 { color: #3C366B; }
+.bg-orange-50 { background-color: #FFFAF0; }
+.text-orange-800 { color: #9C4221; }
+.bg-teal-50 { background-color: #E6FFFA; }
+.text-teal-800 { color: #285E61; }
+.full-span { grid-column: span 6; }
+.half-span { grid-column: span 3; }
+.center-text { text-align: center; }
+footer {
+    padding: 16px;
+    text-align: center;
+    background-color: #f7c8a9;
+    border-radius: 8px;
+    margin-top: 24px;
+}
+.cta-button {
+    padding: 12px 24px;
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+.cta-button:hover {
+    background-color: #104E8B;
+}
+
 
 .parallax {
     background-attachment: fixed;
@@ -153,7 +223,7 @@
             <p>There are times and places where you have a clear idea or vision of what you are after, and need someone to simply bring this project or request to life.</p>
         </div>
 
-        <!-- Tercer Parallax (el que ya habías implementado) -->
+        <!-- Tercer Parallax -->
         <div class="grid-item full-span parallax" style="background-image: url('inspiring_results.jpg');"></div>
 
         <!-- Sección "About Us" -->
@@ -168,6 +238,8 @@
             <p>Finding the right words to communicate your essence and values—why you do what you do—doesn't need to be overwhelming. Sometimes we need to be honest and reflect back if we feel things don't ring true.</p>
             <p>Are you ready to enhance your online presence?</p>
             <button class="cta-button">Call for Initial Free Consultation</button>
+            <p>Are you ready to enhance your online presence?</p>
+            <button class="cta-button">Call for Initial Free Consultation</button>
         </div>
     </div>
 
@@ -175,4 +247,5 @@
         <p>&copy; 2024 Holosian Sol Consulting. All rights reserved.</p>
     </footer>
 </body>
+</html>
 
