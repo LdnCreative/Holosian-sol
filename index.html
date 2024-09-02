@@ -107,54 +107,54 @@
             background-color: #104E8B;
         }
 
-        /* Container for Bento image boxes */
-        .bento-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
-            gap: 16px; /* Space between the columns */
-            padding: 0;
-        }
+      .bento-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 16px;
+}
 
-        /* Bento image box style */
-        .bento-box {
-            position: relative;
-            height: 256px; /* Match the height with other images */
-            border-radius: 8px; /* Rounded corners */
-            overflow: hidden;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-            margin-bottom: 16px; /* Margin to separate rows */
-        }
+.bento-box {
+    position: relative;
+    height: 256px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
 
-        /* Text inside the Bento image boxes */
-        .bento-box p {
-            position: relative;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
-            padding: 10px;
-            border-radius: 4px;
-            margin: 16px;
-            text-align: center;
-        }
+.bento-box p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    width: 80%;
+}
 
-        /* Single full-width image box for the second row */
-        .bento-box-full {
-            grid-column: span 2; /* Make it span both columns */
-        }
+.bento-box-full {
+    grid-column: span 2;
+}
 
-        /* Adjustments for responsiveness */
-        @media (max-width: 768px) {
-            .bento-container {
-                grid-template-columns: 1fr; /* Stack the boxes on small screens */
-            }
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-            .bento-box-full {
-                grid-column: span 1; /* Ensure it doesn't span both columns on small screens */
-            }
-        }
+@media (max-width: 768px) {
+    .bento-container {
+        grid-template-columns: 1fr;
+    }
+
+    .bento-box-full {
+        grid-column: span 1;
+    }
+}
     </style>
 
 
@@ -168,20 +168,18 @@
             <p>Put your practice on the couch and let's have a heart-to-heart about your online presence.</p>
         </div>
 
-        <!-- Imagen Principal con Cajas "Bento" -->
-        <div class="bento-container">
-            <div class="bento-box" style="background-image: url('sun_image.jpg');">
-                <p>We'll dive deep into your soulful work, helping it shine authentically online.</p>
-            </div>
-            <div class="bento-box" style="background-image: url('sun_image.jpg');">
-                <p>Our guiding principle is to collaborate with those who share our passion for genuine, uplifting work.</p>
-            </div>
-        </div> <!-- Fin de bento-container -->
-
-        <!-- Full-width Bento Image Box in the second row -->
-        <div class="bento-box bento-box-full" style="background-image: url('sun_image.jpg');">
-            <p>Selective: we partner only with therapists and healers committed to true healing. While we embrace having a vision, if you see wellness merely as a trend and business venture or are obsessed with hacking into people's neurosis on social media, we may not be the right fit.</p>
-        </div>
+   <!-- Imagen Principal con Cajas "Bento" -->
+<div class="bento-container full-span">
+    <div class="bento-box parallax" style="background-image: url('sun_image.jpg');">
+        <p>We'll dive deep into your soulful work, helping it shine authentically online.</p>
+    </div>
+    <div class="bento-box parallax" style="background-image: url('sun_image.jpg');">
+        <p>Our guiding principle is to collaborate with those who share our passion for genuine, uplifting work.</p>
+    </div>
+    <div class="bento-box bento-box-full parallax" style="background-image: url('sun_image.jpg');">
+        <p>Selective: we partner only with therapists and healers committed to true healing. While we embrace having a vision, if you see wellness merely as a trend and business venture or are obsessed with hacking into people's neurosis on social media, we may not be the right fit.</p>
+    </div>
+</div>
 
         <!-- Primer Parallax -->
         <div class="grid-item full-span parallax" style="background-image: url('workspace.jpg');"></div>
