@@ -111,7 +111,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
     gap: 16px; /* Space between the columns */
-    padding: 0;
+    padding: 16px; /* Add padding to ensure space around the container */
 }
 
 /* Bento image box style */
@@ -125,18 +125,17 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for better text readability */
 }
 
 /* Text inside the Bento image boxes */
 .bento-box p {
-    position: absolute;
-    bottom: 20px; /* Position the text at the bottom */
-    left: 20px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    position: relative; /* Keep the text relative inside the box */
+    color: black; /* Change text color to black for better contrast */
     padding: 10px;
     border-radius: 4px;
     margin: 0;
+    background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent background for text */
 }
 
 /* Single full-width image box for the second row */
@@ -154,7 +153,6 @@
         grid-column: span 1; /* Ensure it doesn't span both columns on small screens */
     }
 }
-
         
     </style>
 </head>
