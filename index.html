@@ -39,18 +39,16 @@
             height: 100%;
             object-fit: cover;
         }
-
         .parallax {
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            height: 256px; /* Asegurando que coincida con la altura de otras imágenes */
-            border-radius: 8px; /* Para coincidir con el estilo de las otras imágenes */
+            height: 256px; /* Match height with other images */
+            border-radius: 8px; /* Match the style of other images */
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-            overflow: hidden; /* Asegura que la imagen se mantenga dentro de las esquinas redondeadas */
+            overflow: hidden; /* Ensure the image stays within rounded corners */
         }
-
         h1, h2, h3 {
             color: #1E90FF;
             margin-bottom: 16px;
@@ -108,7 +106,6 @@
         .cta-button:hover {
             background-color: #104E8B;
         }
-
         /* Estilos para las cajas Bento */
         .bento-container {
             display: flex;
@@ -119,7 +116,6 @@
             transform: translateY(-50%);
             padding: 20px;
         }
-
         .bento-box {
             background-color: rgba(255, 255, 255, 0.8);
             padding: 20px;
@@ -128,15 +124,13 @@
             width: 30%;
             text-align: center;
         }
-
         /* Ajuste de las posiciones para las cajas Bento */
-.bento-box:nth-child(2) {
-    margin-top: 30px; /* Ajusta este valor según necesites */
-}
-
-.bento-box:nth-child(3) {
-    margin-top: 60px; /* Ajusta este valor según necesites */
-}
+        .bento-box:nth-child(2) {
+            margin-top: 30px; /* Adjust as needed */
+        }
+        .bento-box:nth-child(3) {
+            margin-top: 60px; /* Adjust as needed */
+        }
     </style>
 </head>
 <body>
