@@ -111,14 +111,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
     gap: 16px; /* Space between the columns */
-    padding: 16px; /* Add padding to ensure space around the container */
-}
-
-/* Container for Bento image boxes */
-.bento-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
-    gap: 16px; /* Space between the boxes */
     padding: 0;
 }
 
@@ -126,43 +118,30 @@
 .bento-box {
     position: relative;
     height: 256px; /* Match the height with other images */
-    border-radius: 8px; /* Match the border-radius with other elements */
+    border-radius: 8px; /* Rounded corners */
     overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-/* Specific background settings for each bento box */
-.bento-box:nth-child(1) {
-    background-image: url('your-image-url.jpg');
-    background-position: left center; /* Adjust as needed */
-}
-
-.bento-box:nth-child(2) {
-    background-image: url('your-image-url.jpg');
-    background-position: right center; /* Adjust as needed */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    margin-bottom: 16px; /* Margin to separate rows */
 }
 
 /* Text inside the Bento image boxes */
 .bento-box p {
-    position: absolute;
-    bottom: 20px; /* Position the text at the bottom */
-    left: 20px;
+    position: relative;
     color: white;
     background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
     padding: 10px;
     border-radius: 4px;
-    margin: 0;
+    margin: 16px;
+    text-align: center;
 }
 
 /* Single full-width image box for the second row */
 .bento-box-full {
     grid-column: span 2; /* Make it span both columns */
-    background-image: url('your-image-url.jpg');
-    background-position: center center; /* Adjust as needed */
 }
 
 /* Adjustments for responsiveness */
@@ -175,6 +154,7 @@
         grid-column: span 1; /* Ensure it doesn't span both columns on small screens */
     }
 }
+
         
     </style>
 </head>
