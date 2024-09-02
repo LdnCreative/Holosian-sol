@@ -106,57 +106,58 @@
         .cta-button:hover {
             background-color: #104E8B;
         }
-/* Container for Bento image boxes */
-.bento-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
-    gap: 16px; /* Space between the columns */
-    padding: 0;
-}
 
-/* Bento image box style */
-.bento-box {
-    position: relative;
-    height: 256px; /* Match the height with other images */
-    border-radius: 8px; /* Rounded corners */
-    overflow: hidden;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    margin-bottom: 16px; /* Margin to separate rows */
-}
+        /* Container for Bento image boxes */
+        .bento-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+            gap: 16px; /* Space between the columns */
+            padding: 0;
+        }
 
-/* Text inside the Bento image boxes */
-.bento-box p {
-    position: relative;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
-    padding: 10px;
-    border-radius: 4px;
-    margin: 16px;
-    text-align: center;
-}
+        /* Bento image box style */
+        .bento-box {
+            position: relative;
+            height: 256px; /* Match the height with other images */
+            border-radius: 8px; /* Rounded corners */
+            overflow: hidden;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            margin-bottom: 16px; /* Margin to separate rows */
+        }
 
-/* Single full-width image box for the second row */
-.bento-box-full {
-    grid-column: span 2; /* Make it span both columns */
-}
+        /* Text inside the Bento image boxes */
+        .bento-box p {
+            position: relative;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+            padding: 10px;
+            border-radius: 4px;
+            margin: 16px;
+            text-align: center;
+        }
 
-/* Adjustments for responsiveness */
-@media (max-width: 768px) {
-    .bento-container {
-        grid-template-columns: 1fr; /* Stack the boxes on small screens */
-    }
+        /* Single full-width image box for the second row */
+        .bento-box-full {
+            grid-column: span 2; /* Make it span both columns */
+        }
 
-    .bento-box-full {
-        grid-column: span 1; /* Ensure it doesn't span both columns on small screens */
-    }
-}
+        /* Adjustments for responsiveness */
+        @media (max-width: 768px) {
+            .bento-container {
+                grid-template-columns: 1fr; /* Stack the boxes on small screens */
+            }
 
-        
+            .bento-box-full {
+                grid-column: span 1; /* Ensure it doesn't span both columns on small screens */
+            }
+        }
     </style>
+
+
 </head>
 
    <body>
