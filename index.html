@@ -114,6 +114,14 @@
     padding: 16px; /* Add padding to ensure space around the container */
 }
 
+/* Container for Bento image boxes */
+.bento-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+    gap: 16px; /* Space between the boxes */
+    padding: 0;
+}
+
 /* Bento image box style */
 .bento-box {
     position: relative;
@@ -125,22 +133,36 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for better text readability */
+}
+
+/* Specific background settings for each bento box */
+.bento-box:nth-child(1) {
+    background-image: url('your-image-url.jpg');
+    background-position: left center; /* Adjust as needed */
+}
+
+.bento-box:nth-child(2) {
+    background-image: url('your-image-url.jpg');
+    background-position: right center; /* Adjust as needed */
 }
 
 /* Text inside the Bento image boxes */
 .bento-box p {
-    position: relative; /* Keep the text relative inside the box */
-    color: black; /* Change text color to black for better contrast */
+    position: absolute;
+    bottom: 20px; /* Position the text at the bottom */
+    left: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
     padding: 10px;
     border-radius: 4px;
     margin: 0;
-    background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent background for text */
 }
 
 /* Single full-width image box for the second row */
 .bento-box-full {
     grid-column: span 2; /* Make it span both columns */
+    background-image: url('your-image-url.jpg');
+    background-position: center center; /* Adjust as needed */
 }
 
 /* Adjustments for responsiveness */
