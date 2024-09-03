@@ -158,7 +158,7 @@
     </style>
 </head>
 <body>
-<nav style="background-color: #1E90FF; position: fixed; top: 0; width: 100%; z-index: 1000; padding: 10px 0;">
+    <nav style="background-color: #1E90FF; position: fixed; top: 0; width: 100%; z-index: 1000; padding: 10px 0;">
         <ul style="list-style-type: none; margin: 0; padding: 0; display: flex; justify-content: center;">
             <li style="margin: 0 15px;"><a href="#home" style="color: white; text-decoration: none; font-weight: bold;">Home</a></li>
             <li style="margin: 0 15px;"><a href="#philosophy" style="color: white; text-decoration: none; font-weight: bold;">Our Philosophy</a></li>
@@ -169,7 +169,7 @@
     </nav>
     
     <div class="container" style="padding-top: 60px;">
-        <div class="grid-item full-span bg-white">
+        <div id="home" class="grid-item full-span bg-white">
             <h1>Holosian Sol Consulting</h1>
             <p>Put your practice on the couch and let's have a heart-to-heart about your online presence.</p>
         </div>
@@ -186,7 +186,7 @@
             </div>
         </div>
 
-        <div class="grid-item full-span bg-blue-50 text-blue-800">
+        <div id="philosophy" class="grid-item full-span bg-blue-50 text-blue-800">
             <h2>Our Philosophy</h2>
             <p>We understand that those who dedicate their lives to helping and healing others often find it challenging to promote the impact of their work, treatments, and modalities. When you give all your energy to lifting others, it's hard to find the time to become an expert, or keep on top of marketing and self-promotion.</p>
         </div>
@@ -213,51 +213,49 @@
 
         <div class="grid-item full-span parallax" style="background-image: url('collaborative_meeting.jpg');"></div>
 
-       <div class="services-container">
-    <div class="services-background"></div> <!-- Background image applied here -->
-    <div class="services-content">
-        <div class="service-header">
-            <h2>Our Services</h2>
+        <div id="services" class="services-container">
+            <div class="services-background"></div> <!-- Background image applied here -->
+            <div class="services-content">
+                <div class="service-header">
+                    <h2>Our Services</h2>
+                </div>
+                <p class="services-description">We specialise in creating digital experiences that reflect your practice or self-help brand, designed specifically for holistic professionals and those in the self-help space.</p>
+                <div class="services-grid">
+                    <div class="service-box">
+                        <h3>Website Audits</h3>
+                        <p>A close review of your current website design and copy identifies simple improvements to make it work better for you, as well as addresses what your target clients need and want to know.</p>
+                    </div>
+                    <div class="service-box">
+                        <h3>Website Copywriting</h3>
+                        <p>Maybe you need a slight refresh or a complete overhaul. Clear, empathetic content is crafted to speak directly to your audience, reflecting the care and dedication you bring to your work.</p>
+                    </div>
+                    <div class="service-box">
+                        <h3>Simple Website Builds</h3>
+                        <p>Beautiful, user-friendly websites are designed to meet your needs, allowing you to focus on what you do best: helping others.</p>
+                    </div>
+                    <div class="service-box">
+                        <h3>Business Plans and Strategy</h3>
+                        <p>Whether starting out or planning to grow, a simple, clear roadmap is developed to align with your goals and values. Let's take a helicopter review of what you do, the space you operate in and opportunities on the horizon.</p>
+                    </div>
+                    <div class="service-box">
+                        <h3>Elevating Your Voice</h3>
+                        <p>With so many possible channels to be on, we help you find what feels manageable and comfortable. Successfully communicate your expertise through blogging, social media, and other channels, while staying true to your message.</p>
+                    </div>
+                    <div class="service-box">
+                        <h3>Intro Videos and Social Content Creation</h3>
+                        <p>Simple, engaging videos and other visual assets are produced to help you introduce yourself and your services to potential clients in an authentic way.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p class="services-description">We specialise in creating digital experiences that reflect your practice or self-help brand, designed specifically for holistic professionals and those in the self-help space.</p>
-        <div class="services-grid">
-            <div class="service-box">
-                <h3>Website Audits</h3>
-                <p>A close review of your current website design and copy identifies simple improvements to make it work better for you, as well as addresses what your target clients need and want to know.</p>
-            </div>
-            <div class="service-box">
-                <h3>Website Copywriting</h3>
-                <p>Maybe you need a slight refresh or a complete overhaul. Clear, empathetic content is crafted to speak directly to your audience, reflecting the care and dedication you bring to your work.</p>
-            </div>
-            <div class="service-box">
-                <h3>Simple Website Builds</h3>
-                <p>Beautiful, user-friendly websites are designed to meet your needs, allowing you to focus on what you do best: helping others.</p>
-            </div>
-            <div class="service-box">
-                <h3>Business Plans and Strategy</h3>
-                <p>Whether starting out or planning to grow, a simple, clear roadmap is developed to align with your goals and values. Let's take a helicopter review of what you do, the space you operate in and opportunities on the horizon.</p>
-            </div>
-            <div class="service-box">
-                <h3>Elevating Your Voice</h3>
-                <p>With so many possible channels to be on, we help you find what feels manageable and comfortable. Successfully communicate your expertise through blogging, social media, and other channels, while staying true to your message.</p>
-            </div>
-            <div class="service-box">
-                <h3>Intro Videos and Social Content Creation</h3>
-                <p>Simple, engaging videos and other visual assets are produced to help you introduce yourself and your services to potential clients in an authentic way.</p>
-            </div>
-        </div>
-    </div>
-</div>
 
- 
-
-        <div class="grid-item full-span bg-orange-50 text-orange-800">
+        <div id="about" class="grid-item full-span bg-orange-50 text-orange-800">
             <h3>About Us</h3>
             <p>At Holosian Sol Consulting, we've been on our own journey of growth and understanding. This experience drives our passion for supporting therapists, healers, holistic practitioners, and self-help professionals who are making a difference in the world. We know that everyone in this field wants to shine and be authentic, but if your message isn't reaching those who need it, your impact can be limited. Our mission is to help you communicate your truth, connect with your audience, and continue to do the work you love.</p>
         </div>
 
-        <div class="grid-item full-span bg-blue-600 center-text" style="color: white;">
-            <h2>Be Your True Self & Shine</h2>
+        <div id="contact" class="grid-item full-span bg-blue-600 center-text" style="color: white;">
+            <h2>Contact Us</h2>
             <p>Finding the right words to communicate your essence and values—why you do what you do—doesn't need to be overwhelming. Sometimes we need to be honest and reflect back if we feel things don't ring true.</p>
             <p>Are you ready to enhance your online presence?</p>
             <button class="cta-button">Call for Initial Free Consultation</button>
@@ -286,7 +284,5 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 </script>
-    
-
 </body>
 </html>
