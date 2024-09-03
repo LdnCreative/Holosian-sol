@@ -44,10 +44,10 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            height: 256px; /* Match height with other images */
-            border-radius: 8px; /* Match the style of other images */
+            height: 256px;
+            border-radius: 8px;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-            overflow: hidden; /* Ensure the image stays within rounded corners */
+            overflow: hidden;
         }
         h1, h2, h3 {
             color: #1E90FF;
@@ -106,138 +106,105 @@
         .cta-button:hover {
             background-color: #104E8B;
         }
-
-      .bento-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-    margin-bottom: 16px;
-}
-
-.bento-box {
-    position: relative;
-    height: 256px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-
-.bento-box p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 4px;
-    text-align: center;
-    width: 80%;
-}
-
-.bento-box-full {
-    grid-column: span 2;
-}
-
-.parallax {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-@media (max-width: 768px) {
-    .bento-container {
-        grid-template-columns: 1fr;
-    }
-
-    .bento-box-full {
-        grid-column: span 1;
-    }
-}
- .services-container {
+        .bento-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        .bento-box {
+            position: relative;
+            height: 256px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+        .bento-box p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+            width: 80%;
+        }
+        .bento-box-full {
+            grid-column: span 2;
+        }
+        .services-container {
             position: relative;
             z-index: 1;
             background-color: rgba(255, 255, 255, 0.9);
             padding: 2rem;
-            margin-bottom: -200px; /* Adjust this value to control overlap */
+            margin-bottom: -200px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
         .services-title {
             text-align: center;
             color: #1E90FF;
             margin-bottom: 1rem;
         }
-
         .services-description {
             text-align: center;
             margin-bottom: 2rem;
         }
-
         .services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1rem;
         }
-
         .service-box {
             background-color: white;
             padding: 1rem;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-
         .service-box h3 {
             color: #1E90FF;
             margin-bottom: 0.5rem;
         }
-
         .flashlight-image {
-            height: 400px; /* Adjust this value as needed */
-            margin-top: 200px; /* Should match the negative margin-bottom of services-container */
+            height: 400px;
+            margin-top: 200px;
         }
-
         @media (max-width: 768px) {
-            .services-grid {
+            .bento-container, .services-grid {
                 grid-template-columns: 1fr;
             }
+            .bento-box-full {
+                grid-column: span 1;
+            }
         }
-        
     </style>
-
-
 </head>
-
 <body>
     <div class="container">
-        <!-- Sección de Encabezado -->
         <div class="grid-item full-span bg-white">
             <h1>Holosian Sol Consulting</h1>
             <p>Put your practice on the couch and let's have a heart-to-heart about your online presence.</p>
         </div>
 
-<!-- Imagen Principal con Cajas "Bento" -->
-<div class="bento-container full-span">
-    <div class="bento-box parallax" style="background-image: url('workspace.jpeg');">
-        <p>We'll dive deep into your soulful work, helping it shine authentically online.</p>
-    </div>
-    <div class="bento-box parallax" style="background-image: url('workspace.jpeg');">
-        <p>Our guiding principle is to collaborate with those who share our passion for genuine, uplifting work.</p>
-    </div>
-    <div class="bento-box bento-box-full parallax" style="background-image: url('workspace.jpeg');">
-        <p>Selective: we partner only with therapists and healers committed to true healing. While we embrace having a vision, if you see wellness merely as a trend and business venture or are obsessed with hacking into people's neurosis on social media, we may not be the right fit.</p>
-    </div>
-</div>
+        <div class="bento-container full-span">
+            <div class="bento-box parallax" style="background-image: url('workspace.jpeg');">
+                <p>We'll dive deep into your soulful work, helping it shine authentically online.</p>
+            </div>
+            <div class="bento-box parallax" style="background-image: url('workspace.jpeg');">
+                <p>Our guiding principle is to collaborate with those who share our passion for genuine, uplifting work.</p>
+            </div>
+            <div class="bento-box bento-box-full parallax" style="background-image: url('workspace.jpeg');">
+                <p>Selective: we partner only with therapists and healers committed to true healing. While we embrace having a vision, if you see wellness merely as a trend and business venture or are obsessed with hacking into people's neurosis on social media, we may not be the right fit.</p>
+            </div>
+        </div>
 
-        <!-- Filosofía -->
         <div class="grid-item full-span bg-blue-50 text-blue-800">
             <h3>Our Philosophy</h3>
             <p>We understand that those who dedicate their lives to helping and healing others often find it challenging to promote the impact of their work, treatments, and modalities. When you give all your energy to lifting others, it's hard to find the time to become an expert, or keep on top of marketing and self-promotion.</p>
         </div>
 
-        <!-- Segunda Sección -->
         <div class="grid-item half-span bg-green-50 text-green-800">
             <h3>Being Your Holistic Champion</h3>
             <p>When you spend so much time helping others overcome their self-doubts, where do you turn for support with your own business insecurities? While we are not coaches, our holistic approach offers more than just transactional business services. We are professional yet flexible, adapting to your unique needs.</p>
@@ -248,58 +215,58 @@
             <p>At Holosian Sol Consulting, we believe in no hard selling or pushing you into anything that doesn't feel right or true to you. First and foremost, we're here to listen and allow you to be vulnerable if you so wish, creating a safe space to do so.</p>
         </div>
 
-        <!-- Segundo Parallax -->
+        <div class="bento-container full-span">
+            <div class="bento-box half-span bg-purple-50 text-purple-800">
+                <h3>Unearthing Your Treasures</h3>
+                <p>Then we move on to look at what unique story you have to tell. Everything we do is about aligning with your voice, core essence, and experiences, ensuring your message connects with the people who need it most. No cookie-cutter framework here—each person is completely different.</p>
+            </div>
+            <div class="bento-box half-span bg-teal-50 text-teal-800">
+                <h3>Activating Your Clear Focus</h3>
+                <p>There are times and places where you have a clear idea or vision of what you are after, and need someone to simply bring this project or request to life.</p>
+            </div>
+        </div>
+
         <div class="grid-item full-span parallax" style="background-image: url('collaborative_meeting.jpg');"></div>
 
-   <!-- Unearthing Your Treasures (moved up) -->
-<div class="grid-item full-span bg-purple-50 text-purple-800">
-    <h3>Unearthing Your Treasures</h3>
-    <p>Then we move on to look at what unique story you have to tell. Everything we do is about aligning with your voice, core essence, and experiences, ensuring your message connects with the people who need it most. No cookie-cutter framework here—each person is completely different.</p>
-</div>
+        <div class="services-container full-span">
+            <h2 class="services-title">Our Services</h2>
+            <p class="services-description">We specialise in creating digital experiences that reflect your practice or self-help brand, designed specifically for holistic professionals and those in the self-help space.</p>
+            
+            <div class="bento-container services-grid">
+                <div class="bento-box service-box">
+                    <h3>Website Audits</h3>
+                    <p>A close review of your current website design and copy identifies simple improvements to make it work better for you, as well as addresses what your target clients need and want to know.</p>
+                </div>
+                <div class="bento-box service-box">
+                    <h3>Website Copywriting</h3>
+                    <p>Maybe you need a slight refresh or a complete overhaul. Clear, empathetic content is crafted to speak directly to your audience, reflecting the care and dedication you bring to your work.</p>
+                </div>
+                <div class="bento-box service-box">
+                    <h3>Simple Website Builds</h3>
+                    <p>Beautiful, user-friendly websites are designed to meet your needs, allowing you to focus on what you do best: helping others.</p>
+                </div>
+                <div class="bento-box service-box">
+                    <h3>Business Plans and Strategy</h3>
+                    <p>Whether starting out or planning to grow, a simple, clear roadmap is developed to align with your goals and values. Let's take a helicopter review of what you do, the space you operate in and opportunities on the horizon.</p>
+                </div>
+                <div class="bento-box service-box">
+                    <h3>Elevating Your Voice</h3>
+                    <p>With so many possible channels to be on, we help you find what feels manageable and comfortable. Successfully communicate your expertise through blogging, social media, and other channels, while staying true to your message.</p>
+                </div>
+                <div class="bento-box service-box">
+                    <h3>Intro Videos and Social Content Creation</h3>
+                    <p>Simple, engaging videos and other visual assets are produced to help you introduce yourself and your services to potential clients in an authentic way.</p>
+                </div>
+            </div>
+        </div>
 
-<!-- Services Section -->
-<div class="services-container full-span">
-    <h2 class="services-title">Our Services</h2>
-    <p class="services-description">We specialise in creating digital experiences that reflect your practice or self-help brand, designed specifically for holistic professionals and those in the self-help space.</p>
-    
-    <div class="bento-container services-grid">
-        <div class="bento-box service-box">
-            <h3>Website Audits</h3>
-            <p>A close review of your current website design and copy identifies simple improvements to make it work better for you, as well as addresses what your target clients need and want to know.</p>
-        </div>
-        <div class="bento-box service-box">
-            <h3>Website Copywriting</h3>
-            <p>Maybe you need a slight refresh or a complete overhaul. Clear, empathetic content is crafted to speak directly to your audience, reflecting the care and dedication you bring to your work.</p>
-        </div>
-        <div class="bento-box service-box">
-            <h3>Simple Website Builds</h3>
-            <p>Beautiful, user-friendly websites are designed to meet your needs, allowing you to focus on what you do best: helping others.</p>
-        </div>
-        <div class="bento-box service-box">
-            <h3>Business Plans and Strategy</h3>
-            <p>Whether starting out or planning to grow, a simple, clear roadmap is developed to align with your goals and values. Let's take a helicopter review of what you do, the space you operate in and opportunities on the horizon. There is no shame in being ambitious or wanting to grow your business in this line of work.</p>
-        </div>
-        <div class="bento-box service-box">
-            <h3>Elevating Your Voice</h3>
-            <p>With so many possible channels to be on and the fear of exposing yourself, we help you find what feels manageable and comfortable. Successfully communicate your expertise through blogging, social media, and other channels, helping you connect with more people while staying true to your message.</p>
-        </div>
-        <div class="bento-box service-box">
-            <h3>Visual Assets & Intro Video Creation</h3>
-            <p>Simple, engaging videos and other visual assets are produced to help you introduce yourself and your services to potential clients in an authentic way.</p>
-        </div>
-    </div>
-</div>
+        <div class="flashlight-image full-span parallax" style="background-image: url('inspiring_results.jpeg');"></div>
 
-<!-- Flashlight Image (inspiring_results.jpeg) -->
-<div class="flashlight-image full-span parallax" style="background-image: url('inspiring_results.jpeg');"></div>
-
-        <!-- Sección "About Us" -->
         <div class="grid-item full-span bg-orange-50 text-orange-800">
             <h3>About Us</h3>
             <p>At Holosian Sol Consulting, we've been on our own journey of growth and understanding. This experience drives our passion for supporting therapists, healers, holistic practitioners, and self-help professionals who are making a difference in the world. We know that everyone in this field wants to shine and be authentic, but if your message isn't reaching those who need it, your impact can be limited. Our mission is to help you communicate your truth, connect with your audience, and continue to do the work you love.</p>
         </div>
 
-        <!-- Sección "Be Your True Self & Shine" -->
         <div class="grid-item full-span bg-blue-600 center-text" style="color: white;">
             <h2>Be Your True Self & Shine</h2>
             <p>Finding the right words to communicate your essence and values—why you do what you do—doesn't need to be overwhelming. Sometimes we need to be honest and reflect back if we feel things don't ring true.</p>
