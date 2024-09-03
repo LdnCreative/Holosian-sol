@@ -112,6 +112,10 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  width: 100%; /* Ensure it takes the full width */
+  max-width: 1200px; /* Or whatever width you want to set */
+  margin: 0 auto; /* Center it */
+  display: block; /* Ensure it behaves as a block-level element */
 }
 
 .services-content {
@@ -119,49 +123,19 @@
   z-index: 1; /* Stacks above the background */
 }
 
-.service-header {
+.service-header h2 {
   text-align: center;
   margin-bottom: 24px;
+  color: white; /* Change to white */
+  font-weight: bold; /* Make it bold */
+  font-size: 2em; /* Increase the font size */
   background-color: transparent; /* Ensure no background is applied */
 }
 
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.service-box {
-  background-color: white;
-  padding: 16px;
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-
-        /* Adjust the spacing between the service boxes */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 32px; /* Increased from 24px to 32px for more spacing */
-}
-
-/* Style for "Our Services" text */
-.service-header h2 {
-  color: white; /* Change to white */
-  font-weight: bold; /* Make it bold */
-  font-size: 2em; /* Increase the font size */
-}
-
-/* Floating effect */
-@keyframes float-up {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .service-box {
@@ -170,13 +144,14 @@
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   opacity: 0; /* Initially hide the box */
-  animation: float-up 1s ease-out forwards;
+  transform: translateY(20px); /* Start the box slightly down */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
 }
 
 /* Trigger the floating effect as you scroll */
 .service-box.in-view {
   opacity: 1;
-  animation: float-up 1s ease-out forwards;
+  transform: translateY(0); /* Move the box to its original position */
 }
               
     </style>
