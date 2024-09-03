@@ -103,49 +103,54 @@
             grid-column: span 2;
         }
         
-.services-container {
-  position: relative;
-  border-radius: 16px;
-  overflow: hidden;
-  margin: 48px auto; /* Espaciado vertical y centrado horizontal */
-  padding: 24px; /* Padding to ensure content doesn't touch the edges */
-  background-image: url('inspiring_results.jpg'); /* Apply background image to the entire section */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  width: 100%; /* Ensure it takes the full width */
-  max-width: 1200px; /* Or whatever width you want to set */
-  display: block; /* Ensure it behaves as a block-level element */
+#services {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 48px 0;
+    padding: 24px;
+    background-image: url('inspiring_results.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-.services-content {
-  position: relative; /* Ensures it stacks above the background */
-  z-index: 1; /* Stacks above the background */
+#services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
 }
 
-.service-header h2 {
-  text-align: center;
-  margin-bottom: 24px;
-  color: white; /* Change to white */
-  font-weight: bold; /* Make it bold */
-  font-size: 2em; /* Increase the font size */
-  background-color: transparent; /* Ensure no background is applied */
+#services > * {
+    position: relative;
+    z-index: 2;
 }
 
 .services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px; /* Increased from 24px to 32px for more spacing */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 24px;
 }
-        
+
 .service-box {
-  background-color: white;
-  padding: 16px;
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  opacity: 0; /* Initially hide the box */
-  transform: translateY(20px); /* Start the box slightly down */
-  transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.service-box.in-view {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Trigger the floating effect as you scroll */
