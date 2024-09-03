@@ -5,7 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Holosian Sol Consulting</title>
     <style>
-        body {
+        .container {
+    max-width: 1200px; /* Ancho máximo para centrar el contenido */
+    margin: 0 auto; /* Centra el contenedor */
+    padding-top: 60px; /* Asegura que el contenido no quede oculto por el menú */
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
+}
+                body {
             font-family: Arial, sans-serif;
             background: linear-gradient(to bottom right, #f5e1c1, #f7c8a9, #f8b282, #f4d69f);
             padding: 16px;
