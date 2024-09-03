@@ -111,13 +111,23 @@
 
 .services-background {
   background-image: url('services_background.jpg');
-  padding: 48px 24px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
 .services-content {
+  position: relative; /* Ensure it stacks above the background */
   background-color: rgba(255,255,255,0.8);
   border-radius: 16px;
   padding: 24px;
+  z-index: 1; /* Stacks above the background */
 }
 
 .service-header {
