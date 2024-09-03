@@ -155,6 +155,56 @@
         grid-column: span 1;
     }
 }
+ .services-container {
+            position: relative;
+            z-index: 1;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            margin-bottom: -200px; /* Adjust this value to control overlap */
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .services-title {
+            text-align: center;
+            color: #1E90FF;
+            margin-bottom: 1rem;
+        }
+
+        .services-description {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .service-box {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-box h3 {
+            color: #1E90FF;
+            margin-bottom: 0.5rem;
+        }
+
+        .flashlight-image {
+            height: 400px; /* Adjust this value as needed */
+            margin-top: 200px; /* Should match the negative margin-bottom of services-container */
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
     </style>
 
 
@@ -201,19 +251,47 @@
         <!-- Segundo Parallax -->
         <div class="grid-item full-span parallax" style="background-image: url('collaborative_meeting.jpg');"></div>
 
-        <!-- Tercera Sección -->
-        <div class="grid-item half-span bg-purple-50 text-purple-800">
-            <h3>Unearthing Your Treasures</h3>
-            <p>Then we move on to look at what unique story you have to tell. Everything we do is about aligning with your voice, core essence, and experiences, ensuring your message connects with the people who need it most. No cookie-cutter framework here—each person is completely different.</p>
-        </div>
+   <!-- Unearthing Your Treasures (moved up) -->
+<div class="grid-item full-span bg-purple-50 text-purple-800">
+    <h3>Unearthing Your Treasures</h3>
+    <p>Then we move on to look at what unique story you have to tell. Everything we do is about aligning with your voice, core essence, and experiences, ensuring your message connects with the people who need it most. No cookie-cutter framework here—each person is completely different.</p>
+</div>
 
-        <div class="grid-item half-span bg-pink-50 text-pink-800">
-            <h3>Clear Focus</h3>
-            <p>There are times and places where you have a clear idea or vision of what you are after, and need someone to simply bring this project or request to life.</p>
+<!-- Services Section -->
+<div class="services-container full-span">
+    <h2 class="services-title">Our Services</h2>
+    <p class="services-description">We specialise in creating digital experiences that reflect your practice or self-help brand, designed specifically for holistic professionals and those in the self-help space.</p>
+    
+    <div class="bento-container services-grid">
+        <div class="bento-box service-box">
+            <h3>Website Audits</h3>
+            <p>A close review of your current website design and copy identifies simple improvements to make it work better for you, as well as addresses what your target clients need and want to know.</p>
         </div>
+        <div class="bento-box service-box">
+            <h3>Website Copywriting</h3>
+            <p>Maybe you need a slight refresh or a complete overhaul. Clear, empathetic content is crafted to speak directly to your audience, reflecting the care and dedication you bring to your work.</p>
+        </div>
+        <div class="bento-box service-box">
+            <h3>Simple Website Builds</h3>
+            <p>Beautiful, user-friendly websites are designed to meet your needs, allowing you to focus on what you do best: helping others.</p>
+        </div>
+        <div class="bento-box service-box">
+            <h3>Business Plans and Strategy</h3>
+            <p>Whether starting out or planning to grow, a simple, clear roadmap is developed to align with your goals and values. Let's take a helicopter review of what you do, the space you operate in and opportunities on the horizon. There is no shame in being ambitious or wanting to grow your business in this line of work.</p>
+        </div>
+        <div class="bento-box service-box">
+            <h3>Elevating Your Voice</h3>
+            <p>With so many possible channels to be on and the fear of exposing yourself, we help you find what feels manageable and comfortable. Successfully communicate your expertise through blogging, social media, and other channels, helping you connect with more people while staying true to your message.</p>
+        </div>
+        <div class="bento-box service-box">
+            <h3>Visual Assets & Intro Video Creation</h3>
+            <p>Simple, engaging videos and other visual assets are produced to help you introduce yourself and your services to potential clients in an authentic way.</p>
+        </div>
+    </div>
+</div>
 
-        <!-- Tercer Parallax -->
-        <div class="grid-item full-span parallax" style="background-image: url('inspiring_results.jpg');"></div>
+<!-- Flashlight Image (inspiring_results.jpeg) -->
+<div class="flashlight-image full-span parallax" style="background-image: url('inspiring_results.jpeg');"></div>
 
         <!-- Sección "About Us" -->
         <div class="grid-item full-span bg-orange-50 text-orange-800">
