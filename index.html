@@ -138,6 +138,46 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
+        /* Adjust the spacing between the service boxes */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px; /* Increased from 24px to 32px for more spacing */
+}
+
+/* Style for "Our Services" text */
+.service-header h2 {
+  color: white; /* Change to white */
+  font-weight: bold; /* Make it bold */
+  font-size: 2em; /* Increase the font size */
+}
+
+/* Floating effect */
+@keyframes float-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-box {
+  background-color: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  opacity: 0; /* Initially hide the box */
+  animation: float-up 1s ease-out forwards;
+}
+
+/* Trigger the floating effect as you scroll */
+.service-box.in-view {
+  opacity: 1;
+  animation: float-up 1s ease-out forwards;
+}
               
     </style>
 </head>
@@ -241,5 +281,26 @@
     <footer>
         <p>&copy; 2024 Holosian Sol Consulting. All rights reserved.</p>
     </footer>
+    
+<script>
+// JavaScript to detect when the service boxes are in view
+document.addEventListener("DOMContentLoaded", function() {
+  const serviceBoxes = document.querySelectorAll('.service-box');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+      }
+    });
+  });
+
+  serviceBoxes.forEach(box => {
+    observer.observe(box);
+  });
+});
+</script>
+    
+
 </body>
 </html>
