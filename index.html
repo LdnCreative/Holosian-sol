@@ -110,23 +110,21 @@
   padding: 24px; /* Added padding to ensure content doesn't touch the edges */
 }
 
-.services-background {
-  background-image: url('inspiring_results.jpg'); /* Corrected file name */
+        .services-container {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 48px 0;
+  padding: 24px;
+  background-image: url('inspiring_results.jpg'); /* Apply background image to the entire section */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1; /* Keeps the background behind content */
 }
 
 .services-content {
   position: relative; /* Ensures it stacks above the background */
   z-index: 1; /* Stacks above the background */
-  background-color: transparent; /* Ensure no background is applied */
 }
 
 .service-header {
@@ -147,9 +145,7 @@
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
-
-      
-        
+              
     </style>
 </head>
 <body>
