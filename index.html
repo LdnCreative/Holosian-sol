@@ -101,60 +101,40 @@
         .bento-box-full {
             grid-column: span 2;
         }
+
 .services-container {
-    position: relative;
-    padding: 48px 24px;
-    margin: 48px 0;
-    border-radius: 16px;
-    overflow: hidden;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 48px 0;
+}
+
+.services-background {
+  background-image: url('services_background.jpg');
+  padding: 48px 24px;
 }
 
 .services-content {
-    position: relative;
-    z-index: 1;
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 16px;
+  padding: 24px;
 }
 
 .service-header {
-    width: fit-content;
-    margin: 0 auto 24px;
-    padding: 12px 24px;
-}
-
-.services-description {
-    color: white;
-    text-align: center;
-    margin-bottom: 36px;
-    font-size: 1.1em;
+  text-align: center;
+  margin-bottom: 24px;
 }
 
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
 .service-box {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 24px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.service-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-}
-
-.service-box h3 {
-    color: #1E90FF;
-    margin-bottom: 16px;
-}
-
-@media (max-width: 768px) {
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
+  background-color: white;
+  padding: 16px;
+  border-radius: 8px;
 }
         
     </style>
@@ -205,41 +185,42 @@
 
         <div class="grid-item full-span parallax" style="background-image: url('collaborative_meeting.jpg');"></div>
 
-    <div class="services-container full-span parallax" style="background-image: url('services_background.jpg');">
-        <div class="services-content">
-            <div class="service-header bento-box">
-                <h2>Our Services</h2>
-            </div>
-            <p class="services-description">We specialise in creating digital experiences that reflect your practice or self-help brand, designed specifically for holistic professionals and those in the self-help space.</p>
-            <div class="services-grid">
-                <div class="service-box bento-box">
-                    <h3>Website Audits</h3>
-                    <p>A close review of your current website design and copy identifies simple improvements to make it work better for you, as well as addresses what your target clients need and want to know.</p>
-                </div>
-                <div class="service-box bento-box">
-                    <h3>Website Copywriting</h3>
-                    <p>Maybe you need a slight refresh or a complete overhaul. Clear, empathetic content is crafted to speak directly to your audience, reflecting the care and dedication you bring to your work.</p>
-                </div>
-                <div class="service-box bento-box">
-                    <h3>Simple Website Builds</h3>
-                    <p>Beautiful, user-friendly websites are designed to meet your needs, allowing you to focus on what you do best: helping others.</p>
-                </div>
-                <div class="service-box bento-box">
-                    <h3>Business Plans and Strategy</h3>
-                    <p>Whether starting out or planning to grow, a simple, clear roadmap is developed to align with your goals and values. Let's take a helicopter review of what you do, the space you operate in and opportunities on the horizon.</p>
-                </div>
-                <div class="service-box bento-box">
-                    <h3>Elevating Your Voice</h3>
-                    <p>With so many possible channels to be on, we help you find what feels manageable and comfortable. Successfully communicate your expertise through blogging, social media, and other channels, while staying true to your message.</p>
-                </div>
-                <div class="service-box bento-box">
-                    <h3>Intro Videos and Social Content Creation</h3>
-                    <p>Simple, engaging videos and other visual assets are produced to help you introduce yourself and your services to potential clients in an authentic way.</p>
-                </div>
-            </div>
+    <div class="services-container full-span">
+  <div class="services-background parallax">
+    <div class="services-content">
+      <div class="service-header bento-box">
+        <h2>Our Services</h2>
+      </div>
+      <p class="services-description">We specialise in creating digital experiences that reflect your practice or self-help brand, designed specifically for holistic professionals and those in the self-help space.</p>
+      <div class="services-grid">
+        <div class="service-box bento-box">
+          <h3>Website Audits</h3>
+          <p>A close review of your current website design and copy identifies simple improvements to make it work better for you, as well as addresses what your target clients need and want to know.</p>
         </div>
+        <div class="service-box bento-box">
+          <h3>Website Copywriting</h3>
+          <p>Maybe you need a slight refresh or a complete overhaul. Clear, empathetic content is crafted to speak directly to your audience, reflecting the care and dedication you bring to your work.</p>
+        </div>
+        <div class="service-box bento-box">
+          <h3>Simple Website Builds</h3>
+          <p>Beautiful, user-friendly websites are designed to meet your needs, allowing you to focus on what you do best: helping others.</p>
+        </div>
+        <div class="service-box bento-box">
+          <h3>Business Plans and Strategy</h3>
+          <p>Whether starting out or planning to grow, a simple, clear roadmap is developed to align with your goals and values. Let's take a helicopter review of what you do, the space you operate in and opportunities on the horizon.</p>
+        </div>
+        <div class="service-box bento-box">
+          <h3>Elevating Your Voice</h3>
+          <p>With so many possible channels to be on, we help you find what feels manageable and comfortable. Successfully communicate your expertise through blogging, social media, and other channels, while staying true to your message.</p>
+        </div>
+        <div class="service-box bento-box">
+          <h3>Intro Videos and Social Content Creation</h3>
+          <p>Simple, engaging videos and other visual assets are produced to help you introduce yourself and your services to potential clients in an authentic way.</p>
+        </div>
+      </div>
     </div>
-
+  </div>
+</div>
 
         <div class="grid-item full-span bg-orange-50 text-orange-800">
             <h3>About Us</h3>
