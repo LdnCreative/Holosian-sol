@@ -102,15 +102,16 @@
             grid-column: span 2;
         }
 
-.services-container {
+        .services-container {
   position: relative;
   border-radius: 16px;
   overflow: hidden;
   margin: 48px 0;
+  padding: 24px; /* Added padding to ensure content doesn't touch the edges */
 }
 
 .services-background {
-  background-image: url('inspiring_results.jpeg'); /* Corrected image name */
+  background-image: url('inspiring_results.jpeg'); /* Ensure the image path is correct */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -119,18 +120,19 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -1;
+  z-index: -1; /* Keeps the background behind content */
 }
 
 .services-content {
   position: relative; /* Ensures it stacks above the background */
-  padding: 24px;
   z-index: 1; /* Stacks above the background */
+  background-color: transparent; /* Ensure no background is applied */
 }
 
 .service-header {
   text-align: center;
   margin-bottom: 24px;
+  background-color: transparent; /* Ensure no background is applied */
 }
 
 .services-grid {
@@ -140,12 +142,11 @@
 }
 
 .service-box {
-  background-color: white; /* Keeps the service boxes distinct and readable */
+  background-color: white;
   padding: 16px;
   border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); /* Optional: adds a subtle shadow */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
-
         
     </style>
 </head>
