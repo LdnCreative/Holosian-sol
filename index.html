@@ -6,14 +6,14 @@
     <title>Archetypes & Sol</title>
     <style>
         .container {
-    max-width: 1200px; /* Ancho máximo para centrar el contenido */
-    margin: 0 auto; /* Centra el contenedor */
-    padding-top: 60px; /* Asegura que el contenido no quede oculto por el menú */
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 24px;
-}
-                body {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 60px;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 24px;
+        }
+        body {
             font-family: Arial, sans-serif;
             background: linear-gradient(to bottom right, #f5e1c1, #f7c8a9, #f8b282, #f4d69f);
             padding: 16px;
@@ -93,7 +93,9 @@
             left: 50%;
             transform: translate(-50%, -50%);
             color: white;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
             padding: 10px;
             border-radius: 4px;
             text-align: center;
@@ -102,92 +104,71 @@
         .bento-box-full {
             grid-column: span 2;
         }
-
         .bento-box.bento-box-full.parallax {
-    background-image: url('workspace.jpg');
-    background-blend-mode: normal;
-    filter: brightness(1.3) !important; /* Increase brightness by 30% with high specificity */
-}
-        
-#services {
-    position: relative;
-    border-radius: 16px;
-    overflow: hidden;
-    margin: 48px 0;
-    padding: 24px;
-    background-image: url('inspiring_results.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-#services::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.8);
-    z-index: 1;
-}
-
-#services > * {
-    position: relative;
-    z-index: 2;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-    margin-top: 24px;
-}
-
-.service-box {
-    background-color: white;
-    padding: 16px;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.service-box.in-view {
-    opacity: 1;
-    transform: translateY(0);
-}
-        /* Styles for the bento box */
-.bento-box.bento-box-full.parallax {
-    background-image: url('workspace.jpg');
-    background-blend-mode: normal;
-   background-color: rgba(0, 0, 0, 0); /* Fully transparent overlay */
-}
-
+            background-image: url('workspace.jpg');
+            background-blend-mode: normal;
+            filter: brightness(1.3) !important;
+        }
+        #services {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            margin: 48px 0;
+            padding: 24px;
+            background-image: url('inspiring_results.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        #services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            z-index: 1;
+        }
+        #services > * {
+            position: relative;
+            z-index: 2;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 24px;
+        }
+        .service-box {
+            background-color: white;
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .service-box.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
         .cta-button {
-    font-size: 1.5em; /* Increase font size by 50% */
-    padding: 20px 40px; /* Adjust padding to make the button larger */
-    border-radius: 8px; /* Rounded corners */
-    background-color: #1E90FF; /* Button background color */
-    color: white; /* Button text color */
-    border: none; /* Remove any border */
-    cursor: pointer; /* Pointer cursor on hover */
-    text-align: center; /* Center the text inside the button */
-    display: inline-block; /* Ensure it behaves like a block-level element */
-    text-decoration: none; /* Remove underline if it's an anchor */
-}
-
-.cta-button:hover {
-    background-color: #1C86EE; /* Slightly darker color on hover */
-}
-
-/* Trigger the floating effect as you scroll */
-.service-box.in-view {
-  opacity: 1;
-  transform: translateY(0); /* Move the box to its original position */
-}
-              
+            font-size: 1.5em;
+            padding: 20px 40px;
+            border-radius: 8px;
+            background-color: #1E90FF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+            text-decoration: none;
+            margin: 10px;
+        }
+        .cta-button:hover {
+            background-color: #1C86EE;
+        }
     </style>
 </head>
 <body>
@@ -195,6 +176,7 @@
         <ul style="list-style-type: none; margin: 0; padding: 0; display: flex; justify-content: center;">
             <li style="margin: 0 15px;"><a href="#home" style="color: white; text-decoration: none; font-weight: bold;">Home</a></li>
             <li style="margin: 0 15px;"><a href="#philosophy" style="color: white; text-decoration: none; font-weight: bold;">Our Philosophy</a></li>
+            <li style="margin: 0 15px;"><a href="#way-of-working" style="color: white; text-decoration: none; font-weight: bold;">Our Way of Working</a></li>
             <li style="margin: 0 15px;"><a href="#services" style="color: white; text-decoration: none; font-weight: bold;">Services</a></li>
             <li style="margin: 0 15px;"><a href="#about" style="color: white; text-decoration: none; font-weight: bold;">About Us</a></li>
             <li style="margin: 0 15px;"><a href="#contact" style="color: white; text-decoration: none; font-weight: bold;">Contact</a></li>
@@ -203,82 +185,86 @@
     
     <div class="container" style="padding-top: 60px;">
         <div id="home" class="grid-item full-span bg-white">
-            <h1>Holosian Sol Consulting</h1>
-            <p>Put your practice on the couch and let's have a heart-to-heart about your online presence.</p>
+            <h1>Archetypes & Sol</h1>
+            <p>Put your practice, business, and profile on the couch—let's have a heart-to-heart about your online and business strategy in the healing, holistic, and self-help spaces.</p>
         </div>
-<div class="bento-container full-span">
-    <div class="bento-box parallax" style="background-image: url('workspace.jpg');">
-        <p>We'll dive deep into your soulful work, helping it shine authentically online.</p>
-    </div>
-    <div class="bento-box parallax" style="background-image: url('workspace.jpg');">
-        <p>Our guiding principle is to collaborate with those who share our passion for genuine, uplifting work.</p>
-    </div>
-    <div class="bento-box bento-box-full parallax" style="background-image: url('workspace.jpg'); background-blend-mode: normal;">
-        <p>Selective: we partner only with therapists and healers committed to true healing. While we embrace having a vision, if you see wellness merely as a trend and business venture or are obsessed with hacking into people's neurosis on social media, we may not be the right fit.</p>
-    </div>
-</div>
+
+        <div class="bento-container full-span">
+            <div class="bento-box parallax" style="background-image: url('workspace.jpg');">
+                <p>We'll dive deep into your soulful work, helping it shine authentically online.</p>
+            </div>
+            <div class="bento-box parallax" style="background-image: url('workspace.jpg');">
+                <p>Our guiding principle is to collaborate with those who share our passion for genuine, uplifting work.</p>
+            </div>
+            <div class="bento-box bento-box-full parallax" style="background-image: url('workspace.jpg'); background-blend-mode: normal;">
+                <p>We understand that promoting your healing work can feel uncomfortable. We're here to help you share your value authentically, without the ickiness of self-promotion. While we embrace vision and ambition, if you see wellness merely as a trend for a new business venture, we may not be the right fit.</p>
+            </div>
+        </div>
 
         <div id="philosophy" class="grid-item full-span bg-blue-50 text-blue-800">
             <h2>Our Philosophy</h2>
-            <p>We understand that those who dedicate their lives to helping and healing others often find it challenging to promote the impact of their work, treatments, and modalities. When you give all your energy to lifting others, it's hard to find the time to become an expert, or keep on top of marketing and self-promotion.</p>
+            <p>At Archetypes & Sol, our philosophy is inspired by the Jungian archetypes of the Explorer and Sage. We understand that giving all your energy to others makes it hard to focus on your own promotion, strategy and marketing, which is where we come in. We help you identify and align with the fundamentals of what makes you different, what drives you, such as your innate calling. We'll ensure your message resonates on a profound level. Whilst we are inspired by Jungian archetypes, we are not tied to this, and tailor our approach to each individual client's needs.</p>
         </div>
 
-        <div class="grid-item half-span bg-green-50 text-green-800">
-            <h3>Being Your Holistic Champion</h3>
-            <p>When you spend so much time helping others overcome their self-doubts, where do you turn for support with your own business insecurities? While we are not coaches, our holistic approach offers more than just transactional business services. We are professional yet flexible, adapting to your unique needs.</p>
+        <div id="way-of-working" class="grid-item full-span bg-green-50 text-green-800">
+            <h2>Our Way of Working</h2>
         </div>
 
         <div class="grid-item half-span bg-yellow-50 text-yellow-800">
-            <h3>Sensitive and Ego-Free Approach</h3>
-            <p>At Holosian Sol Consulting, we believe in no hard selling or pushing you into anything that doesn't feel right or true to you. First and foremost, we're here to listen and allow you to be vulnerable if you so wish, creating a safe space to do so.</p>
-            Sometimes, however we will need to be radically honest and reflect back if we feel things in your website copy or style don't ring true.
+            <h3>Being Your Holistic Champion</h3>
+            <p>While we aren't business coaches, our holistic approach offers more than just transactional services— we adapt to your specific needs, guiding you through the process of promoting your practice with confidence.</p>
         </div>
 
         <div class="grid-item half-span bg-purple-50 text-purple-800">
             <h3>Unearthing Your Treasures</h3>
-            <p>Then we move on to look at what unique story you have to tell. Everything we do is about aligning with your voice, core essence, and experiences, ensuring your message connects with the people who need it most. No cookie-cutter framework here—each person is completely different.</p>
+            <p>Drawing on the framework of Jungian archetypes, we will define your unique story and use this as a starting point. Whether you embody the Healer, the Sage, or the Explorer or more, we help you articulate these elements in a way that speaks directly to those who need your services. Of course we are not tied to any form of thinking or therapy or way of thinking - so if this framework is not your vibe we can adapt to what works for you.</p>
         </div>
 
         <div class="grid-item half-span bg-pink-50 text-pink-800">
-            <h3>Clear Focus</h3>
-            <p>There are times and places where you have a clear idea or vision of what you are after, and need someone to simply bring this project or request to life.</p>
+            <h3>Sensitive and Ego-Free Approach</h3>
+            <p>At Archetypes & Sol, we believe in no hard selling or pushing you into anything that doesn't feel right or true to you. First and foremost, we're here to listen and allow you to be vulnerable if you so wish, creating a safe space to do so. We simply help shine a light on any areas where you feel stuck in your business or projects, much like you would do for your own clients.</p>
         </div>
 
-        <div class="grid-item full-span parallax" style="background-image: url('collaborative_meeting.jpg');"></div>
+        <div class="grid-item half-span bg-teal-50 text-teal-800">
+            <h3>Tough Love</h3>
+            <p>There is a time and place for delving into the shadows, and the need for honest feedback about your profile. It can however be hard when it is about your own practice and how you communicate. We never dictate what you should do or force you to change your approach. Instead, we guide you in stripping out jargon and humanising your copy, so it truly connects with your audience.</p>
+        </div>
 
         <div id="services" class="grid-item full-span bg-blue-50 text-blue-800">
-    <h2>Our Services</h2>
-    <p class="services-description">We specialise in creating digital experiences that reflect your practice or self-help brand, designed specifically for holistic professionals and those in the self-help space.</p>
-    <div class="services-grid">
-        <div class="service-box">
-            <h3>Website Audits</h3>
-            <p>A close review of your current website design and copy identifies simple improvements to make it work better for you, as well as addresses what your target clients need and want to know.</p>
+            <h2>Our Services</h2>
+            <p class="services-description">We specialise in creating digital experience and profile building that reflects your practice or self-help brand, designed specifically for holistic professionals and those in the self-help space.</p>
+            <button class="cta-button">Contact Us for Consultation</button>
+            <div class="services-grid">
+                <div class="service-box">
+                    <h3>Website Audits</h3>
+                    <p>A close review of your current website design and copy identifies simple improvements to make it work better for you, as well as addresses what your target clients need and want to know.</p>
+                </div>
+                <div class="service-box">
+                    <h3>Website Copywriting</h3>
+                    <p>Maybe you need a slight refresh or a complete overhaul. Clear, empathetic content is crafted to speak directly to your audience, reflecting the care and dedication you bring to your work.</p>
+                </div>
+                <div class="service-box">
+                    <h3>Simple Website Builds</h3>
+                    <p>Beautiful, user-friendly websites are designed to meet your needs, allowing you to focus on what you do best: helping others.</p>
+                </div>
+                <div class="service-box">
+                    <h3>Business Plans and Strategy</h3>
+                    <p>Whether starting out or planning to grow, a simple, clear roadmap is developed to align with your goals and values. Let's take a helicopter review of what you do, the space you operate in and opportunities on the horizon.</p>
+                </div>
+                <div class="service-box">
+                    <h3>Elevating Your Voice</h3>
+                    <p>With so many possible channels to be on, we help you find what feels manageable and comfortable. Successfully communicate your expertise through blogging, social media, and other channels, while staying true to your message.</p>
+                </div>
+                <div class="service-box">
+                    <h3>Intro Videos and Social Content Creation</h3>
+                    <p>Simple, engaging videos and other visual assets are produced to help you introduce yourself and your services to potential clients in an authentic way.</p>
+                </div>
+            </div>
         </div>
-        <div class="service-box">
-            <h3>Website Copywriting</h3>
-            <p>Maybe you need a slight refresh or a complete overhaul. Clear, empathetic content is crafted to speak directly to your audience, reflecting the care and dedication you bring to your work.</p>
-        </div>
-        <div class="service-box">
-            <h3>Simple Website Builds</h3>
-            <p>Beautiful, user-friendly websites are designed to meet your needs, allowing you to focus on what you do best: helping others.</p>
-        </div>
-        <div class="service-box">
-            <h3>Business Plans and Strategy</h3>
-            <p>Whether starting out or planning to grow, a simple, clear roadmap is developed to align with your goals and values. Let's take a helicopter review of what you do, the space you operate in and opportunities on the horizon.</p>
-        </div>
-        <div class="service-box">
-            <h3>Elevating Your Voice</h3>
-            <p>With so many possible channels to be on, we help you find what feels manageable and comfortable. Successfully communicate your expertise through blogging, social media, and other channels, while staying true to your message.</p>
-        </div>
-        <div class="service-box">
-            <h3>Intro Videos and Social Content Creation</h3>
-            <p>Simple, engaging videos and other visual assets are produced to help you introduce yourself and your services to potential clients in an authentic way.</p>
-        </div>
-    </div>
-</div>
+
         <div id="about" class="grid-item full-span bg-orange-50 text-orange-800">
             <h3>About Us</h3>
-            <p>At Holosian Sol Consulting, we've been on our own journey of growth and understanding. This experience drives our passion for supporting therapists, healers, holistic practitioners, and self-help professionals who are making a difference in the world. We know that everyone in this field wants to shine and be authentic, but if your message isn't reaching those who need it, your impact can be limited. Our mission is to help you communicate your truth, connect with your audience, and continue to do the work you love.</p>
+            <p>At Archetypes & Sol, our journey is guided by curiosity and wisdom, rooted in the Explorer and Sage archetypes. My personal healing journey has led me to explore my own shadows. Now, I apply my experience from strategy and creative work for brands to help others in the holistic space. I saw a need for consultancy from someone who understands both the intricacies of the healing and holistic space whilst also I can offer an outsider’s perspective. This is an adventure I’m excited to share—helping you elevate your profile and communicate your message in a way that resonates with your audience.</p>
         </div>
 
        <div id="contact" class="grid-item full-span bg-blue-600 center-text" style="color: white;">
