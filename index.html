@@ -172,37 +172,33 @@
             background-color: #1C86EE;
         }
 
-            .way-of-working-group {
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        padding: 24px;
-        margin-bottom: 24px;
-    }
+.way-of-working-group {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 24px;
+    max-width: 1200px; /* Ensures it aligns with other containers */
+    margin: 0 auto; /* Centers the container */
+}
 
-  .bento-container {
+.bento-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Ensures two boxes per row */
+    grid-template-columns: repeat(2, 1fr); /* Two boxes per row */
     gap: 24px; /* Adds spacing between boxes */
-    width: 100%; /* Ensures full width for the container */
 }
 
 .bento-box {
-    padding: 20px; /* Adds padding inside each box */
+    padding: 20px;
     background-color: white;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for visual depth */
-    display: flex; /* Allows flexibility within each box */
-    flex-direction: column; /* Ensures content stacks vertically */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%; /* Ensures the boxes take up the available space */
 }
-
-        .way-of-working-title {
-        font-size: 1.5em;
-        color: #1E90FF;
-        margin-bottom: 16px;
-    }
     </style>
 </head>
 <body>
