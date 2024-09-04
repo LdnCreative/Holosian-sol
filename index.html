@@ -87,7 +87,7 @@
             overflow: hidden;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
         }
-
+       
 .bento-box p {
     position: absolute; /* Ensures the text is centered and positioned correctly */
     top: 50%;
@@ -104,6 +104,13 @@
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4); /* Darken inner shadow for better readability */
 }
 
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+            width: 80%;
+        }
         .bento-box-full {
             grid-column: span 2;
         }
@@ -175,23 +182,16 @@
     </style>
 </head>
 <body>
-<nav style="background-color: #1E90FF; position: fixed; top: 0; width: 100%; z-index: 1000; padding: 20px 0;"> 
-  <ul style="list-style-type: none; margin: 0 auto; padding: 0; display: flex; align-items: center; justify-content: center; max-width: 1200px;"> <!-- Centered and limited width -->
-    <li style="margin-right: 15px;">
-      <img src="logo.png" alt="Archetypes & Sol Logo" style="height: 70px; width: auto;"> <!-- 40% bigger logo -->
-    </li>
-    <li style="margin: 0 15px;"><a href="#home" style="color: white; text-decoration: none; font-weight: bold;">Home</a></li>
-    <li style="margin: 0 15px;"><a href="#philosophy" style="color: white; text-decoration: none; font-weight: bold;">Our Philosophy</a></li>
-    <li style="margin: 0 15px;"><a href="#way-of-working" style="color: white; text-decoration: none; font-weight: bold;">Our Way of Working</a></li>
-    <li style="margin: 0 15px;"><a href="#services" style="color: white; text-decoration: none; font-weight: bold;">Services</a></li>
-    <li style="margin: 0 15px;"><a href="#about" style="color: white; text-decoration: none; font-weight: bold;">About Us</a></li>
-    <li style="margin: 0 15px;"><a href="#contact" style="color: white; text-decoration: none; font-weight: bold;">Contact</a></li>
-  </ul>
-</nav>
-
-<!-- Adjust padding-top to create space between navbar and content -->
-<div class="container" style="padding-top: 150px; max-width: 1200px; margin: 0 auto;"> <!-- Centered container with max width -->
-    <div class="grid-item full-span bg-white">
+    <nav style="background-color: #1E90FF; position: fixed; top: 0; width: 100%; z-index: 1000; padding: 10px 0;">
+        <ul style="list-style-type: none; margin: 0; padding: 0; display: flex; justify-content: center;">
+            <li style="margin: 0 15px;"><a href="#home" style="color: white; text-decoration: none; font-weight: bold;">Home</a></li>
+            <li style="margin: 0 15px;"><a href="#philosophy" style="color: white; text-decoration: none; font-weight: bold;">Our Philosophy</a></li>
+            <li style="margin: 0 15px;"><a href="#way-of-working" style="color: white; text-decoration: none; font-weight: bold;">Our Way of Working</a></li>
+            <li style="margin: 0 15px;"><a href="#services" style="color: white; text-decoration: none; font-weight: bold;">Services</a></li>
+            <li style="margin: 0 15px;"><a href="#about" style="color: white; text-decoration: none; font-weight: bold;">About Us</a></li>
+            <li style="margin: 0 15px;"><a href="#contact" style="color: white; text-decoration: none; font-weight: bold;">Contact</a></li>
+        </ul>
+    </nav>
     
     <div class="container" style="padding-top: 60px;">
         <div id="home" class="grid-item full-span bg-white">
@@ -274,38 +274,5 @@
 
         <div id="about" class="grid-item full-span bg-orange-50 text-orange-800">
             <h3>About Us</h3>
-            <p>At Archetypes & Sol, our journey is guided by curiosity and wisdom, rooted in the Explorer and Sage archetypes. My personal healing journey has led me to explore my own shadows. Now, I apply my experience from strategy and creative work for brands to help others in the holistic space. I saw a need for consultancy from someone who understands both the intricacies of the healing and holistic space whilst also I can offer an outsider’s perspective. This is an adventure I’m excited to share—helping you elevate your profile and communicate your message in a way that resonates with your audience.</p>
-        </div>
+            <p>At Archetypes & Sol, our journey is guided by curiosity and wisdom, rooted in the Explorer an
 
-       <div id="contact" class="grid-item full-span bg-blue-600 center-text" style="color: white;">
-    <h2>Let's Talk</h2>
-    <p>Finding the right words to communicate your essence and values—why you do what you do—doesn't need to be overwhelming. </p>
-    <p>Are you ready to enhance your online presence?</p>
-    <button class="cta-button">Contact Us</button>
-</div>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 Holosian Sol Consulting. All rights reserved.</p>
-    </footer>
-    
-<script>
-// JavaScript to detect when the service boxes are in view
-document.addEventListener("DOMContentLoaded", function() {
-  const serviceBoxes = document.querySelectorAll('.service-box');
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-      }
-    });
-  });
-
-  serviceBoxes.forEach(box => {
-    observer.observe(box);
-  });
-});
-</script>
-</body>
-</html>
