@@ -5,216 +5,197 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Archetypes & Sol</title>
     <style>
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding-top: 60px;
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 24px;
-        }
         body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom right, #f5e1c1, #f7c8a9, #f8b282, #f4d69f);
-            padding: 16px;
-            margin: 0;
-        }
-        .grid-item, .image-break {
-            padding: 24px;
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-            transition: all 0.3s ease-in-out;
-            background-color: white;
-        }
-        .grid-item:hover {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-        }
-        .image-break {
-            height: 256px;
-            position: relative;
-            overflow: hidden;
-        }
-        .image-break img {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .parallax {
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 256px;
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-            overflow: hidden;
-        }
-        h1, h2, h3 {
-            color: #1E90FF;
-            margin-bottom: 16px;
-        }
-        p {
-            color: #333;
-        }
-        .bg-blue-50 { background-color: #EBF8FF; }
-        .text-blue-800 { color: #2C5282; }
-        .bg-green-50 { background-color: #F0FFF4; }
-        .text-green-800 { color: #22543D; }
-        .bg-yellow-50 { background-color: #FFFFF0; }
-        .text-yellow-800 { color: #744210; }
-        .bg-purple-50 { background-color: #FAF5FF; }
-        .text-purple-800 { color: #553C9A; }
-        .bg-pink-50 { background-color: #FFF5F7; }
-        .text-pink-800 { color: #97266D; }
-        .bg-orange-50 { background-color: #FFFAF0; }
-        .text-orange-800 { color: #9C4221; }
-        .bg-teal-50 { background-color: #E6FFFA; }
-        .text-teal-800 { color: #285E61; }
-        .full-span { grid-column: span 6; }
-        .half-span { grid-column: span 3; }
-        .center-text { text-align: center; }
-        .bento-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-            margin-bottom: 24px;
-        }
-        .bento-box {
-            position: relative;
-            height: 256px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-        }
- .bento-box p {
-    position: absolute; /* Ensures the text is centered and positioned correctly */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: black; /* Changing font color to black for better readability */
-    background-color: rgba(255, 255, 255, 0.4); /* Increase opacity for better contrast */
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    padding: 10px;
-    border-radius: 4px;
-    text-align: center;
-    width: 80%;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4); /* Darken inner shadow for better readability */
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #f5e1c1, #f7c8a9, #f8b282, #f4d69f);
+    padding: 16px;
+    margin: 0;
 }
 
-        .bento-box-full {
-            grid-column: span 2;
-        }
-        .bento-box.bento-box-full.parallax {
-            background-image: url('workspace.jpg');
-            background-blend-mode: normal;
-            filter: brightness(1.3) !important;
-        }
-        #services {
-            position: relative;
-            border-radius: 16px;
-            overflow: hidden;
-            margin: 48px 0;
-            padding: 24px;
-            background-image: url('inspiring_results.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        #services::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(255, 255, 255, 0.8);
-            z-index: 1;
-        }
-        #services > * {
-            position: relative;
-            z-index: 2;
-        }
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-            margin-top: 24px;
-        }
-        .service-box {
-            background-color: white;
-            padding: 16px;
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
-        }
-        .service-box.in-view {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .cta-button {
-            font-size: 1.5em;
-            padding: 20px 40px;
-            border-radius: 8px;
-            background-color: #1E90FF;
-            color: white;
-            border: none;
-            cursor: pointer;
-            text-align: center;
-            display: inline-block;
-            text-decoration: none;
-            margin: 10px;
-        }
-        .cta-button:hover {
-            background-color: #1C86EE;
-        }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
+}
 
-/* Adjusting ONLY 'Our Way of Working' bento boxes */
+.grid-item, .image-break, .way-of-working-group {
+    margin-bottom: 40px;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+.grid-item:hover, .working-bento-box:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.image-break {
+    height: 256px;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-break img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 256px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+h1, h2, h3 {
+    color: #1E90FF;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+h1, .way-of-working-title {
+    font-size: 26px;
+    text-align: center;
+}
+
+p {
+    color: #333;
+}
+
+.grid-item.full-span {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.full-span { grid-column: span 6; }
+.half-span { grid-column: span 3; }
+.center-text { text-align: center; }
+
+/* Our Way of Working section specific styles */
 .way-of-working-group {
     border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 24px;
-    margin-bottom: 24px;
-    max-width: 1200px; /* Ensures it aligns with the main container */
-    margin-left: auto;  /* Centers the section */
-    margin-right: auto; /* Centers the section */
-    box-sizing: border-box; /* Includes padding in width calculation */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
 }
 
 .working-bento-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two boxes per row */
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
-    width: 100%; /* Ensures no overshooting */
+    width: 100%;
 }
 
 .working-bento-box {
     padding: 24px;
     background-color: white;
     border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
 }
 
-.working-bento-box:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-
-.way-of-working-title {
-    font-size: 1.5em;
-    color: #1E90FF;
+.working-bento-box h3 {
     margin-bottom: 16px;
-    text-align: center; /* Centers the title */
+    padding-left: 16px;
 }
 
-/* Add responsive behavior */
+.working-bento-box p {
+    padding: 0 16px;
+}
+
+/* Services section */
+#services {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 48px 0;
+    padding: 24px;
+    background-image: url('inspiring_results.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+}
+
+#services > * {
+    position: relative;
+    z-index: 2;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 24px;
+}
+
+.service-box {
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.service-box.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cta-button {
+    font-size: 1.5em;
+    padding: 20px 40px;
+    border-radius: 8px;
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.cta-button:hover {
+    background-color: #1C86EE;
+}
+
+/* Alternating background colors */
+.grid-item:nth-child(even), .working-bento-box:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+/* Responsive behavior */
 @media (max-width: 768px) {
-    .working-bento-container {
-        grid-template-columns: 1fr; /* Stack boxes on smaller screens */
+    .container, .working-bento-container, .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .grid-item, .working-bento-box, .service-box {
+        margin-bottom: 20px;
     }
 }
     </style>
