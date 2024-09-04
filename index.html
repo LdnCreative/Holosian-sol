@@ -173,20 +173,23 @@
         }
 
 /* Adjusting ONLY 'Our Way of Working' bento boxes */
+/* Fixing the alignment for "Our Way of Working" section */
 .way-of-working-group {
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     padding: 24px;
     margin-bottom: 24px;
-    width: 100%;
+    max-width: 1200px; /* Ensures it aligns with the main container */
+    margin-left: auto;  /* Centers the section */
+    margin-right: auto; /* Centers the section */
 }
 
 .working-bento-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two boxes per row */
     gap: 24px;
-    width: 100%;
+    width: 100%; /* Ensures no overshooting */
 }
 
 .working-bento-box {
@@ -205,11 +208,8 @@
     font-size: 1.5em;
     color: #1E90FF;
     margin-bottom: 16px;
-    grid-column: span 6;
+    text-align: center; /* Centers the title */
 }
-
-        
-
     </style>
 </head>
 <body>
