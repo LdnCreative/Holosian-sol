@@ -180,13 +180,25 @@
         margin-bottom: 24px;
     }
 
-    .bento-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
-    }
+  .bento-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Ensures two boxes per row */
+    gap: 24px; /* Adds spacing between boxes */
+    width: 100%; /* Ensures full width for the container */
+}
 
-    .way-of-working-title {
+.bento-box {
+    padding: 20px; /* Adds padding inside each box */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for visual depth */
+    display: flex; /* Allows flexibility within each box */
+    flex-direction: column; /* Ensures content stacks vertically */
+    justify-content: center;
+    align-items: center;
+}
+
+        .way-of-working-title {
         font-size: 1.5em;
         color: #1E90FF;
         margin-bottom: 16px;
